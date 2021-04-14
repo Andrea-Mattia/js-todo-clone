@@ -85,6 +85,12 @@ $(document).ready(function () {
         $(this).parent().remove();
     });
 
+    // 4. Rendere un item completato / da fare
+    $('body').on('click', '.todos li span',function () {
+        // con this quando clicco su un elemtento della lista gli aggiungo o rimuovo la classe completede dinamicamente
+        $(this).toggleClass('completed')
+    });
+
 
 // End doc ready
 });
