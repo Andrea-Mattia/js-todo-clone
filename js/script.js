@@ -56,6 +56,27 @@ $(document).ready(function () {
         list.append(item);
     }
 
+    // 2. Inserimento nuovo todo nella lista tramite la pressione del tasto enter
+    newInput.keyup(function(e) {
+        // se il tasto premuto è 'enter'...
+        if (e.which === 13) {
+            // ...assegno il valore dell'input ad una variabile e lo pulisco da eventuali spazi
+            var text = newInput.val().trim();
+            // controllo che text non sia una stringa vuota
+            if(text !== '') {
+                // clono il template
+                var item = template.clone();
+                // cerco lo span 'text' e ci inserisco il testo che ha scritto l'utente con l'input
+                item.find('.text').text(text);
+                // aggiungo l'item alla lista
+                list.append(item);
+                // resetto il campo di inserimento dell'input dopo averne preso il valore
+                newInput.val('');
+            } else {
+                alert('Attenzione, non hai inserito nessun valore! \nScrivi l\'elemento che vuoi inserire nella ToDo List!');
+            }
+        }
+    });
 
 
 // End doc ready
