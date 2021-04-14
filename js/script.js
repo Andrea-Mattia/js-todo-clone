@@ -31,6 +31,26 @@ $(document).ready(function () {
             text: 'Pulire il PC dalla polvere',
             completed: true,
         },
+        {
+            text: 'Comprare la bacchetta',
+            completed: true,
+        },
+        {
+            text: 'Farsi mandare dalla mamma a prendere il latte',
+            completed: false,
+        },
+        {
+            text: 'Tornare indietro nel tempo dal 2029 al 1984 per uccidere Sarah Connor',
+            completed: true,
+        },
+        {
+            text: 'Far notare a Ridley Scott che nel 2021 le auto ancora non volano',
+            completed: true,
+        },
+        {
+            text: 'Tornare indietro nel tempo per impedirmi di guardare la stagione finale di Scrubs',
+            completed: false,
+        },
     ];
 
     // References
