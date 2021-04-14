@@ -78,6 +78,13 @@ $(document).ready(function () {
         }
     });
 
+    // 3. Rimozione todo items. Uso $('body').on() per fare in modo che anche gli elementi aggiunti
+    // in seguito al caricamento di pagina abbiano la stessa funzionalità
+    $('body').on('click', '.todos li i', function() {
+        // uso this per indicare l'elemento esattamente cliccato, con parent() mi muovo al genitore <li> e lo elimino con remove()
+        $(this).parent().remove();
+    });
+
 
 // End doc ready
 });
